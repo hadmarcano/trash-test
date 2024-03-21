@@ -39,6 +39,25 @@ function TimeForm() {
     return filledFields.length === 2 && !filledFields.includes(fieldName);
   };
 
+  function buildString(Y, M, W, D) {
+    let result = '';
+
+    if (Y !== "") {
+        result += `${Y}Y`;
+    }
+    if (M !== "") {
+        result += `${M}M`;
+    }
+    if (W !== "") {
+        result += `${W}W`;
+    }
+    if (D !== "") {
+        result += `${D}D`;
+    }
+
+    return result;
+}
+
   return (
     <form>
       <TextField
